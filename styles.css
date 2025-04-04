@@ -4,38 +4,174 @@
   text-align: center;
 }
 
-.dice {
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  text-align: center;
+  border-radius: 10%;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-family: "Borel", cursive;
+  background-color: #143D60;
+  color: whitesmoke;
+  border: 2px solid #232931;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  padding: 15px 30px;
+  font-size: 2rem;
+  font-family: "Lexend", sans-serif;
+  cursor: pointer;
+  border-radius: 20px;
+  border: none;
+}
+
+.button:hover {
+  background-color: #FCE22A;
+  color: #232931;
+  transition: 0.5s;
+}
+
+.hand {
   text-align: center;
   display: inline-block;
+  margin: 10px;
+  width: 300px;
+}
 
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(1080deg); /* 3 vòng */
+  }
+}
+
+.spin {
+  animation: spin 1s ease-in-out;
+}
+
+.img1, .img2 {
+  width: 80%;
+  height: 250px;
+  margin: auto;
+  display: block;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  object-fit: contain;    /* Giữ tỷ lệ */
 }
 
 body {
-  background-color: #393E46;
+  background-color: #FDFBEE;
+  color: #232931;
+  font-family: "Borel", cursive;
+  text-align: center;
 }
 
 h1 {
   margin: 30px;
-  font-family: 'Lobster', cursive;
-  text-shadow: 5px 0 #232931;
-  font-size: 8rem;
-  color: #4ECCA3;
+  font-family: "Lexend", sans-serif;
+  background-color: #EB5B00;
+  color: whitesmoke;
+  text-shadow: black 2px 2px 0px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 4rem;
 }
 
 p {
   font-size: 2rem;
-  color: #4ECCA3;
-  font-family: 'Indie Flower', cursive;
-}
-
-img {
-  width: 80%;
+  color: whitesmoke;
+  text-shadow: black 2px 2px 0px;
+  font-family: "Lexend", sans-serif;
+  background-color: #A7D477;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  font-weight: bold;
 }
 
 footer {
-  margin-top: 5%;
-  color: #EEEEEE;
+  margin-top: 40px;
   text-align: center;
-  font-family: 'Indie Flower', cursive;
+  color: #232931;
+  font-size: 1rem;
+  font-family: "Lexend", sans-serif;
+}
 
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.popup-content {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  font-size: 2rem;
+  color: #143D60;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Responsive layout */
+/* Chỉnh sửa cho giao diện mobile */
+@media (max-width: 1200px) {
+  .container {
+    width: 95%;
+  }
+
+  /* Đảm bảo ảnh vẫn song song nhau */
+  .hand {
+    text-align: center;
+    display: inline-block;
+    margin: 5px;
+    width: 45%; /* Điều chỉnh chiều rộng cho ảnh song song */
+  }
+
+  /* Giảm kích thước ảnh trên mobile */
+  .img1, .img2 {
+    width: 80%;
+    height: auto;
+    margin: auto;
+    display: block;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    object-fit: contain;
+  }
+
+  /* Đảm bảo nút và tiêu đề không bị chật */
+  .button {
+    font-size: 1.5rem;
+    padding: 10px 20px;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  p {
+    font-size: 1.5rem;
+  }
 }
