@@ -2,29 +2,37 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8" />
-    <title>Dicee</title>
+    <title>Ngân Lớn hay Bé?</title>
     <link rel="stylesheet" href="styles.css" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Indie+Flower|Lobster"
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
   </head>
   <body>
     <div class="container">
-      <h1>Refresh Me</h1>
+      <h1>Ngân Lớn hay Bé?</h1>
+      <button class="button" onclick="playGame()">Start</button>
 
-      <div class="dice">
-        <p>Thach</p>
-        <img class="img1" src="./images/dice6.png" />
+      <div class="hand">
+        <p>Bé</p>
+        <img class="img1" src="./images/scissors.png"/>
       </div>
 
-      <div class="dice">
-        <p>Ngan</p>
-        <img class="img2" src="./images/dice6.png" />
+      <div class="hand">
+        <p>Lớn</p>
+        <img class="img2" src="./images/scissors.png" />
       </div>
     </div>
 
-    <footer>www 🎲 App Brewery 🎲 com</footer>
+    <footer>www 🎲 Thach 🎲 com</footer>
+    <div id="resultPopup" class="popup hidden">
+      <div class="popup-content">
+        <p id="popupText"></p>
+       <!-- Nút "Chơi lại" -->
+        <button id="replayButton" class="button hidden" style="margin-top: 20px;">Chơi lại</button>
+        <!-- Nút "Quay lại" -->
+        <button id="resetButton" class="button hidden" style="margin-top: 20px;">Quay lại</button>
+    </div>
+
     <script src="index.js" charset="utf-8"></script>
   </body>
 </html>
